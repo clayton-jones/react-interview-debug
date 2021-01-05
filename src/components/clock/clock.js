@@ -1,18 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 
 export default function Clock() {
-  const [time, setTime] = useState(+new Date(Date.now()));
-
-  useEffect(() => {
-
-    const timer = setInterval(() => {
-      let timeNow = new Date(Date.now());
-
-      setTime(timeNow.getTime());
-    }, 3000);
-    
-
-  }, []);
+  const [time] = useState(+new Date(Date.now()));
 
   return (
     <section id='clock'>
